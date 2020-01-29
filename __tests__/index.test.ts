@@ -1,3 +1,4 @@
+/* global test */
 import { fakeVat, verifyVat } from '../src'
 
 test('fake vat', () => {

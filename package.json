@@ -1,0 +1,60 @@
+{
+  "name": "italian-vat-better",
+  "version": "1.0.0",
+  "description": "Generate fake Italian vat and verify vats",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "yarn jest",
+    "build": "yarn jest && tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/credimi/italianVatBetter.git"
+  },
+  "keywords": [
+    "vat",
+    "fake",
+    "mock",
+    "verify",
+    "italy"
+  ],
+  "author": "Credimi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/credimi/italianVatBetter/issues"
+  },
+  "homepage": "https://github.com/credimi/italianVatBetter#readme",
+  "typings": "dist/index.d.ts",
+  "devDependencies": {
+    "@types/jest": "^24.0.22",
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
+    "@typescript-eslint/parser": "^2.6.1",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.1.0",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.7.2"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier-eslint --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "from-province-to-region": "^1.0.0"
+  }
+}

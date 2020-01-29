@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "standard",
+    "prettier",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": false,
+    "@typescript-eslint/indent": false,
+    "@typescript-eslint/explicit-member-accessibility": false,
+    "@typescript-eslint/prefer-interface": false,
+    "@typescript-eslint/camelcase": false,
+    "@typescript-eslint/member-delimiter-style": "none"
+  },
+  "env": {
+    "browser": true,
+    "jest": true
+  }
+}

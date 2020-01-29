@@ -3,10 +3,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var calcXY = function (nums) {
     return nums.reduce(function (result, num, i) {
         if (i % 2 === 0) {
-            result[0] += nums[i];
+            result[0] += num;
         }
         else {
-            var check = nums[i] * 2;
+            var check = num * 2;
             result[1] += check > 9 ? check - 9 : check;
         }
         return result;
@@ -17,10 +17,12 @@ var calcT = function (input) {
     return (x + y) % 10;
 };
 var fakeVat = function (input) {
-    if (input === void 0) { input = Math.random().toString(10).slice(-10); }
+    if (input === void 0) { input = Math.random()
+        .toString(10)
+        .slice(-10); }
     if (input.length !== 10)
         throw new Error('10 chars string only');
-    return input + (10 - calcT(input)) % 10;
+    return input + ((10 - calcT(input)) % 10);
 };
 exports.fakeVat = fakeVat;
 var verifyVat = function (input) { return input.length === 11 && calcT(input) === 0; };

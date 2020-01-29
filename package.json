@@ -1,6 +1,6 @@
 {
   "name": "italian-vat-better",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate fake Italian vat and verify vats",
   "main": "dist/index.js",
   "scripts": {
